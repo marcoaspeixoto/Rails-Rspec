@@ -8,7 +8,17 @@ RSpec.describe User, type: :model do
       user.name = "Marco"
       user.email = "marco@marco.com"
 
-      expect(user.valid?).to be true
+      expect(user.valid?).to be_truthy
+    end
+
+    it "Usuário inválido?" do
+      user = User.new
+      user.name = "Marco"
+      user.email = nil
+
+      expect(user.valid?).to be_falsey
     end
   end
+
+
 end
