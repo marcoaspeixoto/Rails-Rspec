@@ -20,5 +20,15 @@ RSpec.describe User, type: :model do
     end
   end
 
+  context "Títulos válidos" do
+    it "Título completo" do
+      user = User.new
+      user.name = "Jackson"
+      user.email = "jack@jack.com"
+
+      expect(user.titulo_completo).to eql("Sr. Jackson - Email: jack@jack.com")
+    end
+  end
+
 
 end
