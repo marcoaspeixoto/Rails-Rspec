@@ -29,6 +29,4 @@ RSpec.describe User, type: :model do
       expect(user.titulo_completo).to eql("Sr. Jackson - Email: jack@jack.com")
     end
   end
-
-
 end
